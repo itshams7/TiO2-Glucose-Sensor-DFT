@@ -1,0 +1,10 @@
+Parameter,Value,Unit,Notes
+Lattice Parameter a,8.721,Angstrom,Optimized
+Lattice Parameter b,8.721,Angstrom,Optimized
+Lattice Parameter c,12.394,Angstrom,Optimized
+Band Gap,2.41,eV,Direct Band Gap
+Adsorption Energy (Glucose),-31.42,kcal/mol,Target Analyte
+Adsorption Energy (Fructose),-28.67,kcal/mol,Interference
+Adsorption Energy (Urea),-19.53,kcal/mol,Interference
+Isosteric Heat (Glucose),34.18,kcal/mol,Strongest Binding
+Selectivity Ratio (Glu/Urea),1.61,ratio,calculated
