@@ -1,0 +1,30 @@
+{
+  "simulation_platform": "Biovia Materials Studio 2023",
+  "module": "CASTEP",
+  "dft_settings": {
+    "functional": "GGA-PBE",
+    "pseudopotential": "Ultrasoft",
+    "cutoff_energy_eV": 500,
+    "scf_tolerance": "1.0e-5 eV/atom",
+    "convergence": {
+      "max_force_eV_A": 0.03,
+      "max_stress_GPa": 0.05,
+      "max_displacement_A": 0.001
+    }
+  },
+  "k_points": {
+    "geometry_optimization": "2x2x2 Monkhorst-Pack",
+    "electronic_properties": "4x4x4 Monkhorst-Pack"
+  },
+  "adsorption_settings": {
+    "module": "Forcite / Adsorption Locator",
+    "forcefield": "COMPASS",
+    "monte_carlo_steps": 100000,
+    "temperature_cycles": 5
+  },
+  "target_analytes": [
+    "Glucose (C6H12O6)",
+    "Fructose (Isomer Control)",
+    "Urea (Interference Control)"
+  ]
+}
