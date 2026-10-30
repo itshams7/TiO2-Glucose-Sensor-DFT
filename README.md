@@ -1,40 +1,43 @@
-# TiO2-Based Non-Enzymatic Glucose Sensor Simulation
+# Computational Study of TiO₂-Based Glucose Sensing
 
-This repository documents the Density Functional Theory (DFT) analysis of Titanium Dioxide (TiO2) nanostructures for non-enzymatic glucose detection. The study utilizes **Materials Studio (CASTEP)** to model electronic properties and **Adsorption Locator** to evaluate sensor selectivity against interfering agents.
+**Undergraduate research | Density functional theory | Materials simulation**
 
-## Project Overview
-Current enzymatic glucose sensors suffer from degradation and high manufacturing costs. This project proposes a **Non-Enzymatic TiO2** alternative, optimized via computational modeling to ensure long-term stability and cost reduction.
+## Overview
 
-## Simulation Methodology
-*   **Platform:** Materials Studio (CASTEP Module)
-*   **Functional:** Generalized Gradient Approximation (GGA-PBE)
-*   **Cutoff Energy:** 500 eV
-*   **K-Points:** 4x4x4 Monkhorst-Pack (Electronic Properties)
-*   **Adsorption Forcefield:** COMPASS
+A computational investigation of titanium dioxide (TiO₂) structures for non-enzymatic glucose-sensing applications. The project examines electronic properties and the relative adsorption behaviour of glucose and selected interfering molecules.
 
-## Key Findings
+## Methods
 
-### 1. Electronic Properties
-The geometry optimization resulted in a stable lattice structure with the following parameters:
-*   **a = b:** 8.721 Å
-*   **c:** 12.394 Å
-*   **Band Gap:** 2.41 eV (indicating effective semiconducting behavior for sensing applications).
+- **Simulation platform:** BIOVIA Materials Studio
+- **Electronic-structure calculations:** CASTEP, using GGA-PBE
+- **Adsorption analysis:** Adsorption Locator / COMPASS force field
+- **Comparison molecules:** Glucose, fructose and urea
 
-### 2. Adsorption & Selectivity
-The adsorption energy ($E_{ads}$) was calculated using:
-$$E_{ads} = E_{total} - (E_{surface} + E_{adsorbate})$$
+Configuration details are documented in `simulation_config.json`.
 
-| Adsorbate | Adsorption Energy (kcal/mol) | Selectivity Status |
-| :--- | :--- | :--- |
-| **Glucose** | **-31.42** | **Primary Target** |
-| Fructose | -28.67 | High Selectivity |
-| Urea | -19.53 | Low Interference |
+## Reported Results
 
-**Conclusion:** Glucose exhibits the strongest binding affinity (-31.42 kcal/mol), confirming that TiO2 can effectively distinguish glucose from common blood interferents like Urea.
+The repository's summary dataset records the following values:
+
+| Parameter | Reported value |
+| --- | ---: |
+| Band gap | 2.41 eV |
+| Glucose adsorption energy | −31.42 kcal/mol |
+| Fructose adsorption energy | −28.67 kcal/mol |
+| Urea adsorption energy | −19.53 kcal/mol |
+
+These values are presented as the results recorded in this repository. The summary files alone do not establish experimental sensor performance.
 
 ## Repository Contents
-*   `simulation_config.json`: Exact DFT and Forcefield parameters used in CASTEP.
-*   `results_summary.csv`: Raw data table of lattice parameters and energy values.
 
----
-*Author: Shamseldin Abdelrahim*
+- `simulation_config.json` — Documented modelling settings
+- `results_summary.csv` — Tabulated reported simulation outputs
+- `README.md` — Research overview
+
+## Scope and Limitations
+
+This repository is a compact research summary rather than a complete archive of raw Materials Studio project files or a fully reproducible calculation workflow. Findings concern computational modelling, not laboratory-validated device performance.
+
+## Author
+
+Shamseldin Abdelrahim
